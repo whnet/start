@@ -1,12 +1,6 @@
 # coding:utf-8
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render_to_response
 
 
 def index(request):
-    return HttpResponse("hello,world!")
-
-
-def test(request):
-    list = {'name': 'yanli', 'address': '华贸', 'title': '测试文档'}
-    return render(request, "index.html", list)
+    return render_to_response("index.html")
